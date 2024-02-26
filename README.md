@@ -162,22 +162,11 @@ of the structure and interfaces of the codebase.
 
 <h1>What's New!</h1>
 
-Reactime 23.0 brings a new look to the UI, completely updates all outdated packages, and significantly improves stability by solving loading bugs.
+Reaectime 24.0 adds a new accessibility feature, revamping the snapshot functionality to render a stateful view of the Chrome Accessibility tree. Reactime v24.0 also brings additional bug fixes and improves stability of the application.
 
-UI
+<strong>Accessibility Tree</strong>
 
-V23 showcases a sharp new theme to our extension’s UI. We also opted to completely overhaul the styling architecture to make it easier for future developers to change it to their liking.
-
-Dependencies
-
-As of Reactime v22, installing node modules required the use of npm --force due to numerous lingering peer dependency issues. We have tackled this issue head-on in v23 of Reactime. We trimmed bulky packages that already served their purpose. We completely updated those that played a vital role in our extension’s current operation, and we fully resolved their conflicts with other dependencies. By downsizing from 124 to 70 packages, we have made Reactime much lighter and more future-proof.
-
-This effort serves to bolster Reactime in two ways: First, updating packages like react router and webpack gives Reactime’s users access to the performance upgrades that come with modern versions. Additionally, we have future-proofed Reactime by leaving our dependencies at their latest versions. This effort gives future developers of the extension a head start in adding new features and expanding the power of existing ones.
-
-Loading stability
-
-Reactime has experienced persistent issues with stably loading up. Our first step in tackling these loading inconsistencies was to thoroughly unpack Reactime’s inner workings. Tracking the flow of messages from our content script, our background service workers, the Redux state management and our extension’s backend allowed us to diagnose potential roadblocks as Reactime was spinning up. An exhaustive period of trial and error further deepened our understanding of the problem and ultimately led us towards our new and robustly stable launch experience.
-Beyond this, we have built out a road map of documentation with the goal of setting future Reactime developers on the fast track to further enhance the stability of Reactime’s launch and overall user experience.
+Using the Chrome Debugger API, Reactime is now able to render a complete view of the native Chrome Accessibility tree and integrates seamlessly with the Snapshot features already present in Reactime. To get started, navigate to the accessibility tab within Reactime, read the Note to Developers and click "Enable" when ready. Reactime takes advantage of Chrome's Debugger API, which notifies the user through a pop-up
 
 If you would like to read more about previous releases, click <a href="https://github.com/open-source-labs/reactime/releases">here!</a>
 
@@ -226,15 +215,13 @@ Alternatively, you can open up your Chrome DevTools and navigate to the Reactime
 
 ## <b>Troubleshooting</b>
 
-### ❓ <b>Why is Reactime telling me that no React application is found?</b>
+### ❓ <b>Why is Reactime telling me that no React application/no Target is found?</b>
 
-Reactime initially runs using the dev tools global hook from the Chrome API. It
-takes time for Chrome to load this. Try refreshing your application a couple of
-times until you see Reactime running.
+Reactime initially runs using the dev tools global hook from the Chrome API. It takes time for Chrome to load this. The current work around is to navigate to your Chrome Extensions and refresh Reactime. Then, navigate back to your application, refresh the page and then within the Reactime Dev Tool, right click and hit "Reload Frame". 
 
 ### ❓ <b>Why do I need to have React Dev Tools enabled?</b>
 
-Reactime works in tandem with the React Developer Tools to access a React application's Fiber tree; under the hood, Reactime traverses the Fiber tree through the React Developer Tool's global hook, pulling all relevant information needed to display to the developer
+Reactime works in tandem with the React Developer Tools to access a React application's Fiber tree; under the hood, Reactime traverses the Fiber tree through the React Developer Tool's global hook, pulling all relevant information needed to display to the developer.
 
 ### ❓ <b>There is a black screen instead of the Reactime extension</b>
 
@@ -255,10 +242,15 @@ Node v16.16.0, please use script 'npm run devlegacy' | 'npm run buildlegacy'
 
 ## <b>Read More</b>
 
+- [Accessibility Tree now available! Updates released in Version 24.0]()
 - [Reactime renovation: Updates Coming in Version 23.0!](https://medium.com/@liam.donaher/reactime-renovation-updates-coming-in-version-23-0-37b2ef2a2771)
 
 ## <b>Authors</b>
 
+- **Amy Yang** - [@ay7991](https://github.com/ay7991)
+- **Eva Ury** - [@evaSUry](https://github.com/evaSUry)
+- **Jesse Guerrero** - [@jguerrero35](https://github.com/jguerrero35)
+- **Oliver Cho** - [@Oliver-Cho](https://github.com/Oliver-Cho)
 - **Ben Margolius** - [@benmarg](https://github.com/benmarg)
 - **Eric Yun** - [@ericsngyun](https://github.com/ericsngyun)
 - **James Nghiem** - [@jemzir](https://github.com/jemzir)
