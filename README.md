@@ -217,7 +217,7 @@ Alternatively, you can open up your Chrome DevTools and navigate to the Reactime
 
 ### ❓ <b>Why is Reactime telling me that no React application/no Target is found?</b>
 
-Reactime initially runs using the dev tools global hook from the Chrome API. It takes time for Chrome to load this. The current work around is to navigate to your Chrome Extensions and refresh Reactime. Then, navigate back to your application, refresh the page and then within the Reactime Dev Tool, right click and hit "Reload Frame". 
+Reactime initially runs using the dev tools global hook from the Chrome API. It takes time for Chrome to load this. The current workaround is to navigate to your Chrome Extensions and refresh Reactime. Then, navigate back to your application, refresh the page, and then within the Reactime Dev Tool, right-click and hit "Reload Frame".
 
 ### ❓ <b>Why do I need to have React Dev Tools enabled?</b>
 
