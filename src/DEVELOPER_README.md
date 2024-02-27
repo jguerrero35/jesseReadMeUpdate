@@ -56,7 +56,7 @@ Here are some notes on the current state of Reactime and considerations for futu
 
 ## Address open issues on the main OSLabs Reactime Github
 
-There are a variety of open issues on the [OSLabs Reactime Github](https://github.com/open-source-labs/reactime) that remain to be addressed.
+There are a variety of open issues on the [OSLabs Reactime Github](https://github.com/open-source-labs/reactime) that remain to be addressed. Notable issues that should be prioritized include fixing the Play button to restore Time Travel, fixing the Port Disconnection issue, and ensuring that Reactime's accessibility features are disabled when closing out of the tab.
 
 ## Main Slice Modularity
 
